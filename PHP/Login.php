@@ -25,7 +25,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             $user = $result->fetch_assoc();
             
             // Kiểm tra mật khẩu (Mật khẩu đã được mã hóa MD5 trong CSDL)
-            if (md5($password) === $user['Passwd']) {
+            if ($password === $user['Passwd']) {
                 // Lưu session 
                 $_SESSION['user_id'] = $user['ID'];
                 $_SESSION['username'] = $user['UserName'];

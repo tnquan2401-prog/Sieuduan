@@ -48,7 +48,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 $_SESSION['pending_user'] = [
                     'username' => $username,
                     'email' => $email,
-                    'password' => md5($password), 
+                    'password' => $password, 
                     'otp' => $otp,
                     'expires_at' => time() + (5 * 60) // Tồn tại 5 phút
                 ];

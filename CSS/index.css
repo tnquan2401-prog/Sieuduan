@@ -841,3 +841,8 @@ footer {
     color: #28a745;
     font-size: 1.3rem;
 }
+
+.banner img{
+    background-size: contain;
+    width: 100%;
+}

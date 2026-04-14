@@ -9,11 +9,14 @@
 </head>
 <body>
     <main>
+        <header class="banner">
+            <img src="Resources\Image\z7726131834067_2362555811a7e23cbf70d8502be8b02b.jpg" alt="">
+        </header>
         <section class="hero">
             <div class="hero-content">
                 <h1>Chung tay sẻ chia, lan tỏa yêu thương</h1>
                 <p>Nơi kết nối những tấm lòng vàng với những hoàn cảnh khó khăn.</p>
-                <a href="products.php" class="btn">Xem vật phẩm quyên góp</a>
+                <a href="index.php?type=products" class="btn">Xem vật phẩm quyên góp</a>
             </div>
         </section>
 
