@@ -1,0 +1,280 @@
+/* CSS Dành Cho Giao Diện Thêm Sản Phẩm - Admin Panel */
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap');
+
+.admin-wrapper {
+    font-family: 'Inter', sans-serif;
+    display: flex;
+    justify-content: center;
+    padding: 50px 20px;
+    background-color: #f8fafc; /* Nền nhạt sạch sẽ */
+    min-height: 100vh;
+}
+
+.admin-form-container {
+    background: #ffffff;
+    width: 100%;
+    max-width: 860px;
+    border-radius: 24px;   /* Bo góc tròn siêu cấp web hiện đại */
+    box-shadow: 0 20px 40px -10px rgba(0, 0, 0, 0.05); /* Bóng đổ xịn xò */
+    padding: 48px;
+    box-sizing: border-box;
+    border: 1px solid #f1f5f9;
+}
+
+/* Header Text */
+.form-header {
+    text-align: center;
+    margin-bottom: 35px;
+}
+
+.form-header h2 {
+    font-family: 'Quicksand', sans-serif;
+    margin: 0;
+    font-size: 32px;
+    font-weight: 700;
+    color: #1e293b;
+    letter-spacing: -0.5px;
+}
+
+.form-header p {
+    color: #64748b;
+    margin-top: 10px;
+    font-size: 16px;
+}
+
+/* Các trường field cơ bản */
+.admin-form .form-group {
+    margin-bottom: 24px;
+    display: flex;
+    flex-direction: column;
+}
+
+.admin-form label {
+    font-size: 14.5px;
+    font-weight: 600;
+    color: #334155;
+    margin-bottom: 10px;
+}
+
+.admin-form label .required {
+    color: #ef4444; 
+}
+
+/* Style chung cho thẻ input */
+.admin-form input[type="text"],
+.admin-form textarea,
+.admin-form select {
+    font-family: 'Inter', sans-serif;
+    padding: 16px 18px;
+    font-size: 15px;
+    border: 1px solid #e2e8f0;
+    border-radius: 12px;
+    background-color: #fcfcfd;
+    color: #0f172a;
+    transition: all 0.25s ease;
+    outline: none;
+    box-sizing: border-box;
+    width: 100%;
+}
+
+.admin-form input[type="text"]:focus,
+.admin-form textarea:focus,
+.admin-form select:focus {
+    border-color: #28a745; 
+    background-color: #ffffff;
+    box-shadow: 0 0 0 4px rgba(40, 167, 69, 0.1); /* Glow effect khi trỏ vào */
+}
+
+.admin-form .input-disabled {
+    background-color: #f1f5f9 !important;
+    color: #94a3b8 !important;
+    cursor: not-allowed;
+    border-color: #e2e8f0 !important;
+}
+
+/* Khu Vực Ném Box Chọn Ảnh Mềm Mại */
+.file-upload-box {
+    position: relative;
+    border: 2px dashed #cbd5e1;
+    border-radius: 16px;
+    background-color: #f8fafc;
+    text-align: center;
+    padding: 40px 20px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.file-upload-box:hover {
+    border-color: #28a745;
+    background-color: #e8f5e9;
+}
+
+.file-upload-box input[type="file"] {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;  /* Ẩn file input mặc định đi */
+    cursor: pointer;
+}
+
+.upload-icon {
+    font-size: 40px;
+    margin-bottom: 12px;
+    display: inline-block;
+}
+
+.upload-title {
+    margin: 5px 0;
+    color: #475569;
+    font-size: 16px;
+}
+
+.file-desc {
+    font-size: 14px;
+    color: #94a3b8;
+    margin-top: 5px;
+}
+
+.file-preview-name {
+    margin-top: 12px;
+    font-size: 14.5px;
+    color: #059669;
+    text-align: left;
+}
+
+/* Các box Layout Grid */
+.form-group-row {
+    display: flex;
+    gap: 20px;
+}
+.form-group-row .form-group:first-child { flex: 1; }
+.form-group-row .flex-2 { flex: 2; }
+
+.form-group-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Chia đôi cột */
+    gap: 20px 24px; 
+}
+
+/* Trình bọc thẻ Select */
+.select-wrapper {
+    position: relative;
+}
+
+.select-wrapper::after {
+    content: "▼";
+    position: absolute;
+    right: 18px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 12px;
+    color: #94a3b8;
+    pointer-events: none;
+}
+
+.admin-form select {
+    appearance: none;
+    -webkit-appearance: none;
+    cursor: pointer;
+}
+
+/* Textarea tự điều hướng dọc */
+.admin-form textarea {
+    resize: vertical;
+}
+
+/* Nút Submit Call to Action */
+.btn-submit {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    width: 100%;
+    padding: 18px;
+    background: linear-gradient(135deg, #28a745 0%, #218838 100%);
+    color: white;
+    font-size: 17px;
+    font-weight: 700;
+    border: none;
+    border-radius: 14px;
+    cursor: pointer;
+    box-shadow: 0 10px 25px rgba(40, 167, 69, 0.25);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    font-family: 'Inter', sans-serif;
+    margin-top: 20px;
+}
+
+.btn-submit:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 15px 35px rgba(40, 167, 69, 0.35);
+    background: linear-gradient(135deg, #218838 0%, #1e7e34 100%);
+}
+
+.btn-submit:active {
+    transform: translateY(1px);
+    box-shadow: 0 5px 15px rgba(40, 167, 69, 0.2);
+}
+
+.btn-icon {
+    font-size: 18px;
+    transition: transform 0.3s ease;
+}
+
+.btn-submit:hover .btn-icon {
+    transform: translateX(5px);
+}
+
+/* Alert Notification Cảnh báo & Thành công */
+.alert {
+    padding: 18px 24px;
+    border-radius: 14px;
+    margin-bottom: 28px;
+    font-size: 15.5px;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    animation: slideInDown 0.5s cubic-bezier(0.2, 0.8, 0.2, 1) forwards;
+}
+
+.alert-success {
+    background-color: #f0fdf4;
+    border: 1px solid #bbf7d0;
+    color: #166534;
+}
+
+.alert-error {
+    background-color: #fef2f2;
+    border: 1px solid #fecaca;
+    color: #991b1b;
+}
+
+.alert-icon { font-size: 20px; }
+
+@keyframes slideInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-15px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsive Cho Thiết Bị Nhỏ */
+@media (max-width: 768px) {
+    .form-group-row,
+    .form-group-grid {
+        grid-template-columns: 1fr;
+        display: flex;
+        flex-direction: column;
+        gap: 0;
+    }
+    .admin-form-container {
+        padding: 30px 20px;
+    }
+    .form-header h2 { font-size: 26px; }
+}
