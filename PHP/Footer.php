@@ -23,6 +23,9 @@
             <p>&copy; 2026 Website Từ Thiện. Phát triển bởi bạn.</p>
         </div>
     </footer>
+
+    <!-- Nút Lên Đầu Trang -->
+    <button id="backToTopBtn" title="Lên đầu trang"><i class="fa-solid fa-arrow-up"></i></button>
     <script src="JS/index.js"></script>
     <script src="JS/scripts.js"></script>
     <script>
@@ -70,6 +73,26 @@
                     if (!searchInput.contains(e.target) && !suggestionsDiv.contains(e.target)) {
                         suggestionsDiv.style.display = 'none';
                     }
+                });
+            }
+
+            // --- XỬ LÝ NÚT LÊN ĐẦU TRANG (BACK TO TOP) ---
+            const backToTopBtn = document.getElementById("backToTopBtn");
+            if (backToTopBtn) {
+                window.addEventListener("scroll", function() {
+                    // Hiện nút khi cuộn xuống 300px
+                    if (window.pageYOffset > 300) {
+                        backToTopBtn.style.display = "block";
+                    } else {
+                        backToTopBtn.style.display = "none";
+                    }
+                });
+
+                backToTopBtn.addEventListener("click", function() {
+                    window.scrollTo({
+                        top: 0,
+                        behavior: "smooth"
+                    });
                 });
             }
         });

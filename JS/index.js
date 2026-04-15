@@ -36,6 +36,30 @@ class Carousel {
         if (carouselContainer) {
             carouselContainer.addEventListener('mouseenter', () => this.stopAutoRotate());
             carouselContainer.addEventListener('mouseleave', () => this.startAutoRotate());
+
+            // Hỗ trợ cảm ứng vuốt (Swipe) trên Mobile/Tablet
+            let startX = 0;
+            let endX = 0;
+
+            carouselContainer.addEventListener('touchstart', (e) => {
+                startX = e.changedTouches[0].screenX;
+                this.stopAutoRotate();
+            }, { passive: true });
+
+            carouselContainer.addEventListener('touchend', (e) => {
+                endX = e.changedTouches[0].screenX;
+                this.handleSwipe(startX, endX);
+                this.startAutoRotate();
+            }, { passive: true });
+        }
+    }
+
+    handleSwipe(startX, endX) {
+        const threshold = 50; // Quãng đường vuốt tối thiểu để lướt trang
+        if (startX - endX > threshold) {
+            this.goToNext(); // Vuốt sang trái -> Ảnh tiếp theo
+        } else if (endX - startX > threshold) {
+            this.goToPrevious(); // Vuốt sang phải -> Ảnh trước đó
         }
     }
 

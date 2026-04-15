@@ -52,10 +52,11 @@ $cartCount = count($_SESSION['cart']);
             </div>
             
             <div class="search-box">
-                    <form action="PHP/Search.php?type=Search" method="GET">
-                        <input type="text" name="keyword" class="keywork" placeholder="Tìm kiếm sản phẩm..." required>
-                    <button type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
-                </form>
+                    <form action="index.php" method="GET">
+                        <input type="hidden" name="type" value="Search">
+                        <input type="text" name="keyword" class="keyword" placeholder="Tìm kiếm danh mục..." required>
+                        <button type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
+                    </form>
                 <div id="search-suggestions" class="search-suggestions"></div>
             </div>
 
@@ -105,16 +106,29 @@ $cartCount = count($_SESSION['cart']);
                 <li class="dropdown">
                     <a href="">Sản phẩm từ thiện <i class="fa-solid fa-angle-down"></i></a>
                     <ul class="dropdown-menu">
-                        <li><a href="index.php?type=QuanAo">Quần áo</a></li>
-                        <li><a href="index.php?type=sachvo">Sách vở</a></li>
-                        <li><a href="index.php?type=nhuyeupham">Nhu yếu phẩm</a></li>
+                        <li class="dropdown-submenu">
+                            <a href="index.php?type=QuanAo">Quần áo <i class="fa-solid fa-angle-right" style="float: right; margin-top: 4px;"></i></a>
+                            <ul class="dropdown-menu">
+                                <li class="dropdown-submenu">
+                                    <a href="#">Người lớn <i class="fa-solid fa-angle-right" style="float: right; margin-top: 4px;"></i></a>
+                                    <ul class="dropdown-menu">
+                                        <li><a href="index.php?type=QuanAo#type_1_season_1">Mùa Đông</a></li>
+                                        <li><a href="index.php?type=QuanAo#type_1_season_0">Mùa Hè</a></li>
+                                    </ul>
+                                </li>
+                                <li class="dropdown-submenu">
+                                    <a href="#">Trẻ em <i class="fa-solid fa-angle-right" style="float: right; margin-top: 4px;"></i></a>
+                                    <ul class="dropdown-menu">
+                                        <li><a href="index.php?type=QuanAo#type_0_season_1">Mùa Đông</a></li>
+                                        <li><a href="index.php?type=QuanAo#type_0_season_0">Mùa Hè</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
                     </ul>
                 </li>
                 <li><a href="index.php?type=NoiQuy">Nội quy</a></li>
                 <li><a href="index.php?type=LienHe">Liên hệ</a></li>
             </ul>
         </nav>
-    </header>
-    <script src="JS/scripts.js"></script>
-</body>
-</html>
+    </header>

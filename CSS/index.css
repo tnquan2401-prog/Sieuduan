@@ -15,7 +15,7 @@ body {
 }
 
 a {
-   
+
     text-decoration: none;
     color: inherit;
 }
@@ -35,7 +35,8 @@ ul {
 }
 
 .logo h2 {
-    color: #28a745; /* Màu xanh lá thân thiện */
+    color: #28a745;
+    /* Màu xanh lá thân thiện */
 }
 
 .search-box form {
@@ -68,6 +69,7 @@ ul {
 .auth-links a:hover {
     color: #28a745;
 }
+
 /* --- Cấu trúc phần bên phải của Top Bar --- */
 .right-actions {
     display: flex;
@@ -78,7 +80,8 @@ ul {
 .quick-icons {
     display: flex;
     gap: 15px;
-    border-right: 2px solid #ddd; /* Đường kẻ mờ ngăn cách với phần đăng nhập */
+    border-right: 2px solid #ddd;
+    /* Đường kẻ mờ ngăn cách với phần đăng nhập */
     padding-right: 20px;
 }
 
@@ -95,7 +98,8 @@ ul {
     color: #28a745;
     text-decoration: none;
     transition: background 0.3s;
-    font-size: 12px; /* Thu nhỏ text placeholder lại để gọn khung */
+    font-size: 12px;
+    /* Thu nhỏ text placeholder lại để gọn khung */
     text-align: center;
 }
 
@@ -106,7 +110,8 @@ ul {
 /* Khung chữ Tooltip hiện ra khi Hover */
 .icon-btn .tooltip {
     position: absolute;
-    top: 130%; /* Đẩy tooltip xuống dưới icon một chút */
+    top: 130%;
+    /* Đẩy tooltip xuống dưới icon một chút */
     left: 50%;
     transform: translateX(-50%);
     background-color: #333;
@@ -119,7 +124,7 @@ ul {
     visibility: hidden;
     transition: all 0.3s ease;
     z-index: 10;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
 }
 
 /* Tạo hình mũi tên nhỏ chỉ lên icon cho đẹp */
@@ -138,30 +143,32 @@ ul {
 .icon-btn:hover .tooltip {
     opacity: 1;
     visibility: visible;
-    top: 115%; /* Nâng mượt lên sát icon */
+    top: 115%;
+    /* Nâng mượt lên sát icon */
 }
+
 /* Navigation */
 .main-nav {
     background-color: #28a745;
 }
 
-.main-nav > ul {
+.main-nav>ul {
     display: flex;
     justify-content: center;
 }
 
-.main-nav > ul > li {
+.main-nav>ul>li {
     position: relative;
 }
 
-.main-nav > ul > li > a {
+.main-nav>ul>li>a {
     display: block;
     padding: 15px 20px;
     color: #fff;
     font-weight: bold;
 }
 
-.main-nav > ul > li > a:hover {
+.main-nav>ul>li>a:hover {
     background-color: #218838;
 }
 
@@ -172,13 +179,18 @@ ul {
     top: 100%;
     left: 0;
     background-color: #fff;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     min-width: 200px;
     z-index: 100;
 }
 
-.dropdown:hover .dropdown-menu {
+.dropdown:hover>.dropdown-menu {
     display: block;
+}
+
+.dropdown-menu li {
+    position: relative;
+    /* Dành cho submenu */
 }
 
 .dropdown-menu li a {
@@ -190,6 +202,17 @@ ul {
 .dropdown-menu li a:hover {
     background-color: #f1f1f1;
     color: #28a745;
+}
+
+/* Thêm định dạng cho SubMenu (Menu lồng 3 cấp) */
+.dropdown-submenu>.dropdown-menu {
+    top: 0;
+    left: 100%;
+    margin-top: -1px;
+}
+
+.dropdown-submenu:hover>.dropdown-menu {
+    display: block;
 }
 
 /* Main Content */
@@ -227,7 +250,8 @@ ul {
 
 .category-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Chia cột tự động */
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    /* Chia cột tự động */
     gap: 20px;
 }
 
@@ -235,14 +259,15 @@ ul {
     background: #fff;
     padding: 20px;
     border-radius: 8px;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
     text-align: center;
     border: 1px solid #eee;
     transition: transform 0.3s ease;
 }
 
 .category-card:hover {
-    transform: translateY(-5px); /* Hiệu ứng nổi lên khi di chuột */
+    transform: translateY(-5px);
+    /* Hiệu ứng nổi lên khi di chuột */
 }
 
 .category-img {
@@ -415,23 +440,27 @@ footer {
     justify-content: center;
     align-items: center;
     padding: 60px 20px;
-    background-color: #e9ecef; /* Màu nền xám nhạt cho nổi form lên */
-    min-height: 70vh; /* Đảm bảo form luôn ở giữa kể cả khi ít nội dung */
+    background-color: #e9ecef;
+    /* Màu nền xám nhạt cho nổi form lên */
+    min-height: 70vh;
+    /* Đảm bảo form luôn ở giữa kể cả khi ít nội dung */
 }
 
 .auth-container {
     background: #fff;
     padding: 40px;
     border-radius: 8px;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
     width: 100%;
-    max-width: 450px; /* Độ rộng tối đa của form */
+    max-width: 450px;
+    /* Độ rộng tối đa của form */
 }
 
 .auth-container h2 {
     text-align: center;
     margin-bottom: 25px;
-    color: #28a745; /* Trùng màu chủ đạo của web */
+    color: #28a745;
+    /* Trùng màu chủ đạo của web */
     font-size: 1.8rem;
 }
 
@@ -458,7 +487,8 @@ footer {
 }
 
 .form-group input:focus {
-    border-color: #28a745; /* Đổi màu viền khi click vào ô nhập */
+    border-color: #28a745;
+    /* Đổi màu viền khi click vào ô nhập */
     box-shadow: 0 0 5px rgba(40, 167, 69, 0.2);
 }
 
@@ -489,6 +519,7 @@ footer {
 .auth-switch a:hover {
     text-decoration: underline;
 }
+
 /* ===============================
    GIAO DIỆN TRANG VỀ CHÚNG TÔI
 ================================== */
@@ -501,7 +532,8 @@ footer {
 
 /* Hero Banner About */
 .about-hero {
-    background-color: #218838; /* Xanh đậm hơn chút cho khác trang chủ */
+    background-color: #218838;
+    /* Xanh đậm hơn chút cho khác trang chủ */
     color: #fff;
     padding: 80px 20px;
     text-align: center;
@@ -562,9 +594,10 @@ footer {
     justify-content: center;
     color: #888;
     font-weight: bold;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
 }
-.story-img .img-placeholder img{
+
+.story-img .img-placeholder img {
     width: 100%;
     padding: 10px;
 }
@@ -589,7 +622,7 @@ footer {
     flex: 1;
     min-width: 300px;
     text-align: center;
-    box-shadow: 0 3px 10px rgba(0,0,0,0.05);
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
     border-top: 4px solid #28a745;
 }
 
@@ -646,6 +679,7 @@ footer {
     color: #555;
     font-size: 0.95rem;
 }
+
 /* ===============================
    GIAO DIỆN TRANG LIÊN HỆ
 ================================== */
@@ -694,12 +728,13 @@ footer {
 }
 
 .contact-info-details i {
-    color: #28a745; /* Icon màu xanh cho đồng bộ web */
+    color: #28a745;
+    /* Icon màu xanh cho đồng bộ web */
     margin-right: 10px;
 }
 
 .map-container {
-    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     border-radius: 8px;
     overflow: hidden;
 }
@@ -747,7 +782,8 @@ footer {
 
 .contact-form input:focus,
 .contact-form textarea:focus {
-    border-color: #bbb; /* Hiệu ứng viền khi click vào */
+    border-color: #bbb;
+    /* Hiệu ứng viền khi click vào */
 }
 
 .contact-form textarea {
@@ -778,6 +814,7 @@ footer {
         gap: 0;
     }
 }
+
 /* ===============================
    GIAO DIỆN TRANG DANH MỤC QUẦN ÁO
 ================================== */
@@ -899,6 +936,7 @@ footer {
         flex-direction: column;
         align-items: stretch;
     }
+
     .filter-form select {
         width: 100%;
     }
@@ -947,7 +985,7 @@ footer {
     background: #fff;
     padding: 20px;
     border-radius: 8px;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
     text-align: center;
     transition: 0.3s;
     border: 1px solid #eee;
@@ -955,7 +993,7 @@ footer {
 
 .product-card:hover {
     transform: translateY(-5px);
-    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
 }
 
 .product-card .product-img {
@@ -987,7 +1025,7 @@ footer {
     background: #fff;
     padding: 40px;
     border-radius: 10px;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
 }
 
 .rule-block {
@@ -1048,7 +1086,7 @@ footer {
     font-size: 1.3rem;
 }
 
-.banner img{
+.banner img {
     background-size: contain;
     width: 100%;
     margin: 10px 0px 10px 0px;
@@ -1062,8 +1100,9 @@ footer {
     background: #f0f0f0;
     border-radius: 10px;
     overflow: hidden;
-   
+
 }
+
 /* ///////////////////////////////////////////////////////////////// */
 .carousel-container {
     position: relative;
@@ -1157,4 +1196,72 @@ footer {
 
 .indicator:hover {
     background: rgba(255, 255, 255, 0.9);
-} 
+}
+
+/* Thêm tính năng sticky cho header */
+header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1); /* Tạo bóng để tách biệt khi cuộn */
+}
+
+/* Nút Lên Đầu Trang (Back to top) */
+#backToTopBtn {
+    display: none; /* Ẩn mặc định */
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    z-index: 999;
+    font-size: 20px;
+    border: none;
+    outline: none;
+    background-color: #28a745;
+    color: white;
+    cursor: pointer;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    transition: all 0.3s ease;
+}
+
+#backToTopBtn:hover {
+    background-color: #218838;
+}
+
+/* ===============================
+   RESPONSIVE CHO HEADER & SEARCH BAR
+================================== */
+@media (max-width: 900px) {
+    .top-bar {
+        flex-direction: column;
+        gap: 15px;
+        padding: 15px 20px;
+    }
+    
+    .search-box {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+
+    .search-box form {
+        width: 100%;
+        max-width: 500px; /* Giữ một mức độ rộng vừa phải trên ipad/mobile thay vì loang hết ra */
+    }
+    
+    .search-box input {
+        width: 100%; /* Tràn hết % được cấp để đùn nút search ra */
+    }
+    
+    .right-actions {
+        width: 100%;
+        justify-content: center;
+    }
+    
+    .auth-links {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+}

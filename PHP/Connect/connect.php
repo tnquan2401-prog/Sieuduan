@@ -1,13 +1,13 @@
 <?php
-$host = "sql308.infinityfree.com";
-$user = "if0_41658507";
-$pass = "aEDZKEUWziEMN";
-$db   = "if0_41658507_duannuoiem_db";
+// $host = "sql308.infinityfree.com";
+// $user = "if0_41658507";
+// $pass = "aEDZKEUWziEMN";
+// $db   = "if0_41658507_duannuoiem_db";
 
-// $host = "localhost";
-// $user = "root";
-// $pass = "";
-// $db   = "duannuoiem_db";
+$host = "localhost";
+$user = "root";
+$pass = "";
+$db   = "duannuoiem_db";
 
 $conn = new mysqli($host, $user, $pass, $db);
 

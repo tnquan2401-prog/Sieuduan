@@ -9,12 +9,12 @@
 </head>
 <body>
     <main>
-        <header class="banner">
+        <div class="banner">
             <img src="Resources\Image\z7726712605539_9af3710a6909247c4c7c55dd89b0bd00.jpg" alt="">
 
 
             
-        </header>
+        </div>
 
   
 

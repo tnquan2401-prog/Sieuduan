@@ -14,11 +14,10 @@ $params = [];
 $types = '';
 
 if ($keyword !== '') {
-    $whereClauses[] = "(sanpham.name LIKE ? OR sanpham.description LIKE ?)";
+    $whereClauses[] = "category.description LIKE ?";
     $searchTerm = '%' . $conn->real_escape_string($keyword) . '%';
     $params[] = $searchTerm;
-    $params[] = $searchTerm;
-    $types .= 'ss';
+    $types .= 's';
 }
 
 if ($categoryFilter !== '') {

@@ -11,17 +11,17 @@ if (strlen($keyword) < 2) {
 }
 
 $searchTerm = '%' . $conn->real_escape_string($keyword) . '%';
-$sql = "SELECT MaSP, name FROM sanpham WHERE (name LIKE ? OR description LIKE ?) AND (CAST(TrangThai AS UNSIGNED) = 0 OR TrangThai IS NULL) ORDER BY MaSP DESC LIMIT 10";
+$sql = "SELECT id, description as name FROM category WHERE description LIKE ? ORDER BY description ASC LIMIT 10";
 $stmt = $conn->prepare($sql);
 if ($stmt) {
-    $stmt->bind_param('ss', $searchTerm, $searchTerm);
+    $stmt->bind_param('s', $searchTerm);
     $stmt->execute();
     $res = $stmt->get_result();
     $results = [];
     if ($res) {
         while ($row = $res->fetch_assoc()) {
             $results[] = [
-                'id' => $row['MaSP'],
+                'id' => $row['id'],
                 'name' => htmlspecialchars($row['name'])
             ];
         }
