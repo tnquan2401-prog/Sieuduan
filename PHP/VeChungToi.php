@@ -17,7 +17,7 @@
                     <p>Chúng tôi hiểu rằng, mỗi món đồ cũ dù là chiếc áo ấm, cuốn sách hay đôi giày đều mang một giá trị lớn lao đối với những hoàn cảnh khó khăn. Thay vì vứt bỏ, chúng ta có thể trao cho chúng một vòng đời mới, mang lại nụ cười cho ai đó ở một nơi nào đó.</p>
                 </div>
                 <div class="story-img">
-                    <div class="img-placeholder"><i class="fa-solid fa-users fa-4x" style="color: #28a745;"></i></div>
+                    <div class="img-placeholder"><img src="Resources\Image\Ảnh tủ đồ yêu thương.png" alt=""></div>
                 </div>
             </div>
         </div>

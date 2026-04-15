@@ -54,7 +54,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 ];
 
                 // Thiết lập PHPMailer
-                $mail = new $PHPMailer(true);
+                $mail = new PHPMailer(true);
                 try {
                     //Server settings
                     $mail->isSMTP(); 
@@ -62,7 +62,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                     $mail->SMTPAuth   = true; 
                     $mail->Username   = 'karaokeparadise3008@gmail.com'; 
                     $mail->Password   = 'razf qglf okvs grcv'; 
-                    $mail->SMTPSecure = $PHPMailer::ENCRYPTION_SMTPS; 
+                    $mail->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS; 
                     $mail->Port       = 465;
                     $mail->CharSet    = 'UTF-8';
 

@@ -16,6 +16,33 @@ $cartCount = count($_SESSION['cart']);
     <title>Trang web từ thiện</title>
     <link rel="stylesheet" href="CSS/index.css">
     <link rel="stylesheet" href="Resources/Icon/FontAwesome/fontawesome-free-7.2.0-web/css/all.min.css">
+    <style>
+        .search-suggestions {
+            position: absolute;
+            top: 100%;
+            left: 0;
+            right: 0;
+            background: white;
+            border: 1px solid #ddd;
+            border-top: none;
+            border-radius: 0 0 8px 8px;
+            max-height: 200px;
+            overflow-y: auto;
+            z-index: 1000;
+            display: none;
+        }
+        .search-suggestions div {
+            padding: 10px;
+            cursor: pointer;
+            border-bottom: 1px solid #eee;
+        }
+        .search-suggestions div:hover {
+            background: #f8f9fa;
+        }
+        .search-box {
+            position: relative;
+        }
+    </style>
 </head>
 <body>
     <header>
@@ -25,10 +52,11 @@ $cartCount = count($_SESSION['cart']);
             </div>
             
             <div class="search-box">
-                    <form action="index.php?type=Search" method="GET">
-                        <input type="text" name="keyword" placeholder="Tìm kiếm sản phẩm..." required>
+                    <form action="PHP/Search.php?type=Search" method="GET">
+                        <input type="text" name="keyword" class="keywork" placeholder="Tìm kiếm sản phẩm..." required>
                     <button type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
                 </form>
+                <div id="search-suggestions" class="search-suggestions"></div>
             </div>
 
             <div class="right-actions">
