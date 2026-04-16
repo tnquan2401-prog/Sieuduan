@@ -14,7 +14,7 @@
         </div>
         <section class="hero">
             <div class="hero-content">
-                <h1>Chung tay sẻ chia, lan tỏa yêu thương</h1>
+                <h1>Cùng nhau chia sẻ - Trọn vẹn yêu thương</h1>
                 <p>Nơi kết nối những tấm lòng vàng với những hoàn cảnh khó khăn.</p>
                 <a href="index.php?type=products" class="btn">Xem vật phẩm quyên góp</a>
             </div>

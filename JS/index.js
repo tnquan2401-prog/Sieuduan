@@ -104,4 +104,40 @@ class Carousel {
 
 document.addEventListener('DOMContentLoaded', () => {
     new Carousel();
+
+    // Hiệu ứng xoay nghiêng thẻ bài (Pokemon Tilt Card)
+    const card = document.querySelector('.story-img .img-placeholder');
+    if (card) {
+        card.addEventListener('mousemove', (e) => {
+            const rect = card.getBoundingClientRect();
+            const x = e.clientX - rect.left; 
+            const y = e.clientY - rect.top; 
+
+            const centerX = rect.width / 2;
+            const centerY = rect.height / 2;
+
+            // Tính góc xoay (Max 15 độ để không bị lật quá đà)
+            const rotateX = ((y - centerY) / centerY) * -15; 
+            const rotateY = ((x - centerX) / centerX) * 15;
+
+            // Đưa tọa độ % vào cho CSS đổi màu Hologram theo tia sáng chiếu
+            const glareX = (x / rect.width) * 100;
+            const glareY = (y / rect.height) * 100;
+
+            card.style.setProperty('--glare-x', `${glareX}%`);
+            card.style.setProperty('--glare-y', `${glareY}%`);
+
+            // Apply 3D Transform
+            card.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) scale3d(1.02, 1.02, 1.02)`;
+            
+            // Apply Dynamic Shadow
+            card.style.boxShadow = `${-rotateY}px ${rotateX}px 30px rgba(0, 0, 0, 0.3)`;
+        });
+
+        // Khi chuột rời đi, trả bài về nguyên vẹn
+        card.addEventListener('mouseleave', () => {
+            card.style.transform = `perspective(1000px) rotateX(0deg) rotateY(0deg) scale3d(1, 1, 1)`;
+            card.style.boxShadow = `0 5px 15px rgba(0, 0, 0, 0.1)`;
+        });
+    }
 });

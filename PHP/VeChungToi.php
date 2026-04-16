@@ -12,9 +12,23 @@
         <div class="container">
             <div class="story-grid">
                 <div class="story-text">
-                    <h2>Câu chuyện của chúng tôi</h2>
-                    <p>Được thành lập từ năm 2026, <strong>Tâm Nguyện</strong> ra đời với một mục tiêu duy nhất: Tạo ra một cầu nối minh bạch, nhanh chóng và dễ dàng giữa những người muốn cho đi và những người đang cần giúp đỡ.</p>
-                    <p>Chúng tôi hiểu rằng, mỗi món đồ cũ dù là chiếc áo ấm, cuốn sách hay đôi giày đều mang một giá trị lớn lao đối với những hoàn cảnh khó khăn. Thay vì vứt bỏ, chúng ta có thể trao cho chúng một vòng đời mới, mang lại nụ cười cho ai đó ở một nơi nào đó.</p>
+                    <h2>Tủ đồ yêu thương</h2>
+                    <p>
+                         - Giữa cuộc sống bộn bề, có những điều tưởng chừng rất nhỏ lại mang theo sức mạnh sưởi ấm lòng người. <strong>“Tủ quần áo yêu thương”</strong> được hình thành từ những sẻ chia giản dị như thế – nơi những chiếc áo cũ tìm thấy hành trình mới, và những tấm lòng tìm thấy nhau trong sự tử tế. <br>
+                         - Đây là chương trình ý nghĩa do Trường Mầm non Mai Động tổ chức và thực hiện, với mong muốn lan tỏa tinh thần tương thân tương ái, gieo những hạt mầm yêu thương ngay từ những hành động nhỏ nhất trong cộng đồng. <br>
+                         - Mỗi món đồ được đặt vào tủ không chỉ đơn thuần là quần áo, 
+                        mà là sự nâng niu, là một lời nhắn gửi âm thầm: <strong>“Bạn không hề đơn độc.”</strong> Người cho đi trao gửi sự quan tâm qua từng chiếc
+                        áo sạch sẽ, gọn gàng; người nhận lại đón nhận không chỉ là 
+                        vật chất mà còn là hơi ấm của tình người trong những ngày
+                        khó khăn. <br>
+                         - <strong>“Tủ quần áo yêu thương”</strong> không cần những điều lớn lao. Chỉ cần một chút san sẻ, một chút ý thức giữ gìn, và một trái tim biết nghĩ cho người khác – thế là đủ để nơi đây luôn đầy ắp yêu thương.
+                        Bởi có những điều rất nhỏ…
+                        nhưng khi được trao đi đúng lúc, lại trở thành điều rất lớn trong cuộc đời của ai đó. 💚
+
+
+
+
+                    </p>
                 </div>
                 <div class="story-img">
                     <div class="img-placeholder"><img src="Resources\Image\Ảnh tủ đồ yêu thương.png" alt=""></div>

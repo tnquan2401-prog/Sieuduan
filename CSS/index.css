@@ -586,20 +586,35 @@ footer {
 }
 
 .story-img .img-placeholder {
-    background-color: #e9ecef;
-    height: 300px;
-    border-radius: 10px;
+    background-color: #ececec;
+    /* Nền tối để làm nổi bật lá bài */
+    height: 400px;
+    border-radius: 15px;
     display: flex;
     align-items: center;
     justify-content: center;
     color: #888;
     font-weight: bold;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+
+    /* 3D Tilt Card Base CSS */
+    transform-style: preserve-3d;
+    transition: transform 0.1s ease, box-shadow 0.1s ease;
+    will-change: transform;
+    position: relative;
+    overflow: hidden;
+    /* Cắt viền sáng dư thừa */
+    cursor: pointer;
 }
 
+/* Ảnh bên trong cần nổi nhẹ lên so với viền (3D Parallax effect) */
 .story-img .img-placeholder img {
     width: 100%;
     padding: 10px;
+    border-radius: 20px;
+    transform: translateZ(30px);
+    /* Bật ảnh nảy lên phía trước */
+    transition: transform 0.3s;
 }
 
 /* Tầm nhìn và Sứ mệnh */
@@ -1203,12 +1218,14 @@ header {
     position: sticky;
     top: 0;
     z-index: 1000;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.1); /* Tạo bóng để tách biệt khi cuộn */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    /* Tạo bóng để tách biệt khi cuộn */
 }
 
 /* Nút Lên Đầu Trang (Back to top) */
 #backToTopBtn {
-    display: none; /* Ẩn mặc định */
+    display: none;
+    /* Ẩn mặc định */
     position: fixed;
     bottom: 30px;
     right: 30px;
@@ -1222,7 +1239,7 @@ header {
     width: 50px;
     height: 50px;
     border-radius: 50%;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     transition: all 0.3s ease;
 }
 
@@ -1239,7 +1256,7 @@ header {
         gap: 15px;
         padding: 15px 20px;
     }
-    
+
     .search-box {
         width: 100%;
         display: flex;
@@ -1248,20 +1265,22 @@ header {
 
     .search-box form {
         width: 100%;
-        max-width: 500px; /* Giữ một mức độ rộng vừa phải trên ipad/mobile thay vì loang hết ra */
+        max-width: 500px;
+        /* Giữ một mức độ rộng vừa phải trên ipad/mobile thay vì loang hết ra */
     }
-    
+
     .search-box input {
-        width: 100%; /* Tràn hết % được cấp để đùn nút search ra */
+        width: 100%;
+        /* Tràn hết % được cấp để đùn nút search ra */
     }
-    
+
     .right-actions {
         width: 100%;
         justify-content: center;
     }
-    
+
     .auth-links {
         flex-wrap: wrap;
         justify-content: center;
     }
-}
+}
