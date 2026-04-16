@@ -11,15 +11,7 @@
     <main>
         <div class="banner">
             <img src="Resources\Image\z7726712605539_9af3710a6909247c4c7c55dd89b0bd00.jpg" alt="">
-
-
-            
         </div>
-
-  
-
-
-
         <section class="hero">
             <div class="hero-content">
                 <h1>Chung tay sẻ chia, lan tỏa yêu thương</h1>
