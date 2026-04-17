@@ -76,6 +76,7 @@ $cartCount = count($_SESSION['cart']);
                                 <div class="admin-dropdown-content" style="display: none; position: absolute; top: 100%; right: 0; background: #fff; min-width: 170px; box-shadow: 0 4px 6px rgba(0,0,0,0.1); border-radius: 8px; z-index: 1000; padding: 10px 0; border: 1px solid #f1f5f9;">
                                     <a href="index.php?type=AdminDuyetDon" style="display: block; padding: 8px 15px; color: #333; font-size: 14px; text-decoration: none; margin: 0;"><i class="fa-solid fa-list-check" style="width: 20px; color: #28a745;"></i> Duyệt Đơn</a>
                                     <a href="index.php?type=admin_add_product" style="display: block; padding: 8px 15px; color: #333; font-size: 14px; text-decoration: none; margin: 0;"><i class="fa-solid fa-plus-circle" style="width: 20px; color: #28a745;"></i> Thêm sản phẩm</a>
+                                    <a href="index.php?type=AdminDanhSachChoDo" style="display: block; padding: 8px 15px; color: #333; font-size: 14px; text-decoration: none; margin: 0;"><i class="fa-solid fa-clipboard-list" style="width: 20px; color: #28a745;"></i> Danh sách cho đồ</a>
                                 </div>
                             </div>
                             <style>
@@ -129,6 +130,7 @@ $cartCount = count($_SESSION['cart']);
                     </ul>
                 </li>
                 <li><a href="index.php?type=NoiQuy">Nội quy</a></li>
+                <li><a href="index.php?type=DangKyChoDo">Đăng ký cho đồ</a></li>
                 <li><a href="index.php?type=LienHe">Liên hệ</a></li>
             </ul>
         </nav>
