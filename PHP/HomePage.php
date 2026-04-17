@@ -73,34 +73,10 @@
                     <a href="index.php?type=QuanAo" class="btn-outline">Xem chi tiết</a>
                 </div>
 
-                <!-- <div class="category-card">
-                    <div class="category-img"><i class="fa-solid fa-bed fa-3x" style="color: #28a745;"></i></div>
-                    <h3>Chăn</h3>
-                    <a href="index.php?type=chan" class="btn-outline">Xem chi tiết</a>
-                </div> -->
-
-                <!-- <div class="category-card">
-                    <div class="category-img"><i class="fa-solid fa-mitten fa-3x" style="color: #28a745;"></i></div>
-                    <h3>Mũ len</h3>
-                    <a href="index.php?type=mu-len" class="btn-outline">Xem chi tiết</a>
-                </div> -->
-
                 <div class="category-card">
                     <div class="category-img"><i class="fa-solid fa-person-dress fa-3x" style="color: #28a745;"></i></div>
                     <h3>Váy</h3>
                     <a href="index.php?type=vay" class="btn-outline">Xem chi tiết</a>
-                </div>
-
-                <div class="category-card">
-                    <div class="category-img"><i class="fa-solid fa-shoe-prints fa-3x" style="color: #28a745;"></i></div>
-                    <h3>Dép</h3>
-                    <a href="index.php?type=dep" class="btn-outline">Xem chi tiết</a>
-                </div>
-
-                <div class="category-card">
-                    <div class="category-img"><i class="fa-solid fa-shoe-prints fa-3x" style="color: #28a745;"></i></div>
-                    <h3>Giày</h3>
-                    <a href="index.php?type=giay" class="btn-outline">Xem chi tiết</a>
                 </div>
             </div>
         </section>

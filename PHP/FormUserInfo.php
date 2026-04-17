@@ -15,18 +15,17 @@ $errorMsg = '';
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $fullname = htmlspecialchars($_POST['fullname'] ?? '');
     $phone = htmlspecialchars($_POST['phone'] ?? '');
-    $address = htmlspecialchars($_POST['address'] ?? '');
     $user_id = $_SESSION['user_id'];
 
-    if (empty($fullname) || empty($phone) || empty($address)) {
+    if (empty($fullname) || empty($phone)) {
         $errorMsg = "Vui lòng điền đầy đủ các trường.";
     } else {
-        // Lưu data vào Database
-        $sql = "INSERT INTO thongtinnguoinhan (users_id, Fullname, Phone, Address) VALUES (?, ?, ?, ?)";
+        // Lưu data vào Database (Chỉ lưu tên và SĐT, không lưu địa chỉ vì nhận tại chỗ)
+        $sql = "INSERT INTO thongtinnguoinhan (users_id, Fullname, Phone) VALUES (?, ?, ?)";
         $stmt = $conn->prepare($sql);
         
         if ($stmt) {
-            $stmt->bind_param("isss", $user_id, $fullname, $phone, $address);
+            $stmt->bind_param("iss", $user_id, $fullname, $phone);
             if ($stmt->execute()) {
                 // Tự động đẩy sản phẩm lúc nãy vào Giỏ
                 if (!isset($_SESSION['cart'])) {
@@ -97,9 +96,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 <input type="text" id="phone" name="phone" required placeholder="09xxxxxx..">
             </div>
             
-            <div class="form-group">
-                <label for="address">Địa chỉ nhận tận nơi</label>
-                <input type="text" id="address" name="address" required placeholder="Số nhà, Tên đường, Quận, Tên thành phố">
+            <div class="form-group" style="padding: 15px; background: #f8fafc; border-radius: 8px; border: 1px dashed #cbd5e1; margin-bottom: 25px;">
+                <p style="margin: 0; font-weight: bold; color: #1e293b;">
+                    <i class="fa-solid fa-location-dot" style="color: #28a745;"></i> Phương thức nhận đồ:
+                </p>
+                <p style="margin: 5px 0 0 0; color: #28a745; font-size: 1.1rem; font-weight: 700;">Nhận tại: Mầm Non Mai Động</p>
+                <p style="margin: 5px 0 0 0; color: #64748b; font-size: 0.85rem;">(Vui lòng qua trực tiếp trường để nhận vật phẩm sau khi được duyệt)</p>
             </div>
             
             <button type="submit" class="btn auth-btn"><i class="fa-solid fa-floppy-disk"></i> Lưu thông tin</button>

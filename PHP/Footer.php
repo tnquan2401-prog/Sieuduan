@@ -1,7 +1,7 @@
     <footer>
         <div class="footer-container">
             <div class="footer-col">
-                <h3>Về Tâm Nguyện</h3>
+                <h3>Về Trường Mầm Non Mai Động</h3>
                 <p>Nền tảng kết nối và chia sẻ vật phẩm từ thiện nhanh chóng, minh bạch.</p>
             </div>
             <div class="footer-col">
@@ -15,12 +15,11 @@
             <div class="footer-col">
                 <h3>Thông tin liên hệ</h3>
                 <p><i class="fa-solid fa-location-dot"></i> Hà Nội, Việt Nam</p>
-                <p><i class="fa-solid fa-phone"></i> 0123 456 789</p>
-                <p><i class="fa-solid fa-envelope"></i> contact@tamnguyen.com</p>
+                <p><i class="fa-solid fa-phone"></i> 02438621076</p>
             </div>
         </div>
         <div class="footer-bottom">
-            <p>&copy; 2026 Website Từ Thiện. Phát triển bởi bạn.</p>
+            <p>&copy; 2026 Website Từ Thiện. Được phát triển bởi các học trò của Ths LeVanUy</p>
         </div>
     </footer>
 

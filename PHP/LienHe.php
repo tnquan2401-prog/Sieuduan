@@ -8,9 +8,9 @@
         <div class="contact-wrapper">
             <div class="contact-left">
                 <div class="contact-info-details">
-                    <p><strong><i class="fa-solid fa-location-dot"></i> Địa chỉ:</strong> 131 Thái Thịnh, Đống Đa, Hà Nội</p>
-                    <p><strong><i class="fa-solid fa-phone"></i> Điện thoại:</strong> 0123 456 789</p>
-                    <p><strong><i class="fa-solid fa-envelope"></i> Email:</strong> contact@tamnguyen.com</p>
+                    <p><strong><i class="fa-solid fa-location-dot"></i> Địa chỉ:</strong> 108 Phố Mai Động, Phường Mai Động, Quận Hoàng Mai, Hà Nội</p>
+                    <p><strong><i class="fa-solid fa-phone"></i> Điện thoại:</strong> 02438621076</p>
+                    <p><strong><i class="fa-solid fa-envelope"></i> Website chính thức:</strong><a style="color: blue;" href="http://mnmaidonghm.edu.vn/"> http://mnmaidonghm.edu.vn/</a></p>
                 </div>
                 
                 <div class="map-container">

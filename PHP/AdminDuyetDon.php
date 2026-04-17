@@ -19,7 +19,7 @@ $sql = "
         sn.ID as RequestID, sn.TrangThai as RequestStatus,
         sp.MaSP, sp.name as ProductName, sp.image as ProductImage, sp.quality,
         u.UserName, u.Email,
-        tt.Fullname, tt.Phone, tt.Address
+        tt.Fullname, tt.Phone
     FROM sanphamnhan sn
     JOIN sanpham sp ON sn.product_id = sp.MaSP
     JOIN users u ON sn.user_id = u.ID
@@ -119,7 +119,6 @@ function getImagePath($quality, $imageName) {
                     <tr style="background-color: #f8fafc; border-bottom: 2px solid #e2e8f0; text-align: left;">
                         <th style="padding: 15px; color: #475569;">Sản phẩm</th>
                         <th style="padding: 15px; color: #475569;">Người nhận</th>
-                        <th style="padding: 15px; color: #475569;">Địa chỉ giao</th>
                         <th style="padding: 15px; color: #475569; width: 150px; text-align: center;">Hành động</th>
                     </tr>
                 </thead>
@@ -147,11 +146,6 @@ function getImagePath($quality, $imageName) {
                                     <div style="font-weight: bold; color: #0f172a; margin-bottom: 5px;"><?= htmlspecialchars($o['Fullname']) ?></div>
                                     <div style="color: #64748b; font-size: 0.9em;"><i class="fa-solid fa-phone" style="font-size: 0.85em;"></i> <?= htmlspecialchars($o['Phone']) ?></div>
                                     <div style="color: #64748b; font-size: 0.9em; margin-top: 3px;"><i class="fa-regular fa-envelope" style="font-size: 0.85em;"></i> <?= htmlspecialchars($o['Email']) ?></div>
-                                </td>
-
-                                <!-- Cột Địa chỉ Giao -->
-                                <td style="padding: 15px; color: #334155; line-height: 1.4; max-width: 250px;">
-                                    <?= htmlspecialchars($o['Address']) ?>
                                 </td>
 
                                 <!-- Cột Hành động -->

@@ -125,13 +125,11 @@ $cartCount = count($_SESSION['cart']);
                                 </li>
                             </ul>
                         </li>
-                        <li><a href="index.php?type=vay">Váy</a></li>
-                        <li><a href="index.php?type=dep">Dép</a></li>
-                        <li><a href="index.php?type=giay">Giày</a></li>
+                        <li><a href="index.php?type=vay">Váy</a></li>   
                     </ul>
                 </li>
                 <li><a href="index.php?type=NoiQuy">Nội quy</a></li>
                 <li><a href="index.php?type=LienHe">Liên hệ</a></li>
             </ul>
         </nav>
-    </header>
+    </header>
